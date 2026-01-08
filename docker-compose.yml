@@ -1,0 +1,13 @@
+services:
+  nextjs:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./manga_pages:/app/manga_pages:rw
+      - ./prisma/main.db:/app/prisma/main.db:rw
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=file:/app/prisma/main.db
+
