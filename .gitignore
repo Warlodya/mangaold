@@ -1,0 +1,5 @@
+/node_modules
+/.next
+/prisma/main.db
+/prisma/main.db-journal
+/manga_pages
